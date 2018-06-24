@@ -1,0 +1,42 @@
+menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+menu ul {
+    margin-left: 20%;
+    list-style: none;
+}
+
+menu li {
+    width: fit-content;
+    font-weight: lighter;
+    text-transform: uppercase;
+    color: white;
+    padding: 50px 10px 20px 10px;
+    margin-bottom: 50px;
+    letter-spacing: 0.15em;
+    font-size: 2.5em;
+    position: relative;
+}
+
+menu li .line {
+    position: absolute;
+    height: 2px;
+    width: 0%;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    transition: width 0.25s 0s ease-out;
+}
+
+menu li:hover .line {
+    width: 100%;
+}
