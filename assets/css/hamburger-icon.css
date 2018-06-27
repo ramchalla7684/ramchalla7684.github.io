@@ -14,7 +14,7 @@
     width: 50%;
     height: 1.5px;
     background-color: black;    
-    transition: all 0.35s 0s ease-out;
+    transition: all 0.25s 0s ease-out;
   }
   
   .hamburger-icon::before, .hamburger-icon::after {
@@ -37,18 +37,24 @@
     bottom: 0;
   }
   
-.hamburger-container:hover .hamburger-icon::before {
-    transform: rotate(-45deg);
-    bottom: 50%;
-    top: 50%;
+
+.hamburger-container:hover .hamburger-icon:not(.open) {
+  width: 75%;
 }
 
-.hamburger-container:hover .hamburger-icon::after {
-    transform: rotate(45deg);
-    top: 50%;
-    bottom: 50%;
+
+.hamburger-icon.open {
+  width: 0;
 }
 
-.hamburger-container:hover .hamburger-icon {
-    width: 0;
+.hamburger-icon.open::before {
+  transform: rotate(-45deg);
+  bottom: 50%;
+  top: 50%;
+}
+
+.hamburger-icon.open::after {
+  transform: rotate(45deg);
+  top: 50%;
+  bottom: 50%;
 }

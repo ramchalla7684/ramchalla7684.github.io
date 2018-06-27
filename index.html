@@ -10,11 +10,11 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Advent+Pro:100" rel="stylesheet">
 
-  <link rel="stylesheet" type="text/css" href="css/reset.css">
-  <link rel="stylesheet" type="text/css" href="css/index.css">
-  <link rel="stylesheet" type="text/css" href="css/hamburger-icon.css">
-  <link rel="stylesheet" type="text/css" href="css/menu.css">
-  <link rel="stylesheet" type="text/css" href="css/project.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/index.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/hamburger-icon.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/menu.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/project.css">
 
   <title>Ram Challa</title>
 </head>
@@ -22,12 +22,12 @@
 <body>
   <main>
     <header>
-      <div class="hamburger-container hover-pointer">
-        <div class="hamburger-icon">
+      <div class="hamburger-container hover-pointer" id="hamburger-container" data-display="none">
+        <div class="hamburger-icon" id="hamburger-icon">
         </div>
       </div>
     </header>
-    <menu>
+    <menu id="menu">
       <ul>
         <li class="hover-pointer item-1">
           <span class="line"></span>
@@ -66,6 +66,9 @@
       </div>
     </section>
   </main>
+
+  <script src="./assets/js/index.js"></script>
+
 </body>
 
 </html>
