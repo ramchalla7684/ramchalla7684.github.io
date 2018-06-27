@@ -102,6 +102,7 @@
 }
 
 button .arrow {
+    display: inline-block;
     margin-left: 10px;
     transition: all 0.25s 0s ease-out;
 }
