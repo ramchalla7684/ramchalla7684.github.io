@@ -1,0 +1,1 @@
+let projectDetails = document.getElementById('project-details');

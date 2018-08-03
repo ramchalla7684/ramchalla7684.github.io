@@ -11,8 +11,12 @@ hamburgerContainer.addEventListener('click', (event) => {
         hamburgerContainer.dataset.display = "block";
     }
     else {
-        menu.style.display = "none";
         hamburgerIcon.classList.remove('open');
         hamburgerContainer.dataset.display = "none";
+        menu.classList.add("close");
+        setTimeout(() => {
+            menu.classList.remove("close");
+            menu.style.display = "none";
+        }, 600);
     }
 });

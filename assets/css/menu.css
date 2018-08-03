@@ -7,6 +7,8 @@ menu {
     z-index: 2;
     background-color: rgba(255, 255, 255, 0.95);
     display: none;
+
+    transition: all 0.6s 0s linear;
 }
 
 menu ul {
@@ -30,15 +32,35 @@ menu li {
 }
 
 menu .item-1 {
-    animation: translate 0.6s ease-out 0s 1 normal forwards;
+    animation: translateUp 0.6s ease-out 0s 1 normal forwards;
 }
 
 menu .item-2 {
-    animation: translate 0.6s ease-out 0.2s 1 normal forwards;
+    animation: translateUp 0.6s ease-out 0.2s 1 normal forwards;
 }
 
 menu .item-3 {
-    animation: translate 0.6s ease-out 0.4s 1 normal forwards;
+    animation: translateUp 0.6s ease-out 0.4s 1 normal forwards;
+}
+
+menu.close {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+menu.close li{
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+menu.close .item-1 {
+    animation: translateDown 0.5s ease-in 0.3s 1 normal forwards;
+}
+
+menu.close .item-2 {
+    animation: translateDown 0.5s ease-in 0.15s 1 normal forwards;
+}
+
+menu.close .item-3 {
+    animation: translateDown 0.5s ease-in 0s 1 normal forwards;
 }
 
 menu li .line {
@@ -56,7 +78,7 @@ menu li:hover .line {
     width: 100%;
 }
 
-@keyframes translate {
+@keyframes translateUp {
     from {
         opacity: 0;
         transform: translateY(100%);
@@ -67,5 +89,15 @@ menu li:hover .line {
     to {
         opacity: 1;
         transform: translateY(0%);
+    }
+}
+@keyframes translateDown {
+    from {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(100%);
     }
 }
